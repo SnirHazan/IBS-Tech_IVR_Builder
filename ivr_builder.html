@@ -1,0 +1,709 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Botalks IVR Builder</title>
+    <meta name="description" content="Botalks">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="images/logoBotalks2.png">
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
+    <script type="text/javascript" src="https://cdn.rawgit.com/asvd/dragscroll/master/dragscroll.js"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+
+    <link href="assets/css/jquery.flowchart.css" rel="stylesheet" type="text/css">
+    <style>
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: #fafafa;
+        }
+
+        .container {
+            margin: 150px auto;
+        }
+
+        .demo {
+            border-color: black;
+            width: 100%;
+            height: 100%;
+            margin-left: 20px;
+            position: sticky;
+        }
+
+        #large-container {
+            width: 3000px;
+            height: 3000px;
+            overflow: hidden;
+            margin-left: 20px;
+
+        }
+
+        #scroll-container {
+            width: calc(50% - 22px);
+            height: calc(80vh - 22px);
+            overflow: auto;
+            margin: 10px;
+            border: 1px solid grey;
+            margin-left: 20px;
+            background-image: url('./images/background.jpg')
+        }
+
+        .draggable_operator {
+            display: inline-block;
+            margin-left: 20px;
+            padding: 2px 5px 2px 5px;
+            border: 1px solid #ccc;
+            cursor: grab;
+            user-select: none;
+        }
+        label, input {
+            display: block;
+        }
+
+        input.text {
+            margin-bottom: 12px;
+            width: 95%;
+            padding: .4em;
+        }
+
+        fieldset {
+            padding: 0;
+            border: 0;
+            margin-top: 25px;
+        }
+
+        h1 {
+            font-size: 1.2em;
+            margin: .6em 0;
+        }
+
+        div#users-contain {
+            width: 350px;
+            margin: 20px 0;
+        }
+
+        div#users-contain table {
+            margin: 1em 0;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        div#users-contain table td,
+        div#users-contain table th {
+            border: 1px solid #eee;
+            padding: .6em 10px;
+            text-align: left;
+        }
+
+        .ui-dialog .ui-state-error {
+            padding: .3em;
+        }
+
+        .validateTips {
+            border: 1px solid transparent;
+            padding: 0.3em;
+        }
+    </style>
+    <!--till here is all Shir work, and styling-->
+</head>
+
+<body>
+    <!-- Left Panel -->
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
+                    aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="./"><img src="images/logoBotalks.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="./"><img src="images/logoBotalks2.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html"> <i class="menu-icon fa ti-home"></i>Home Page </a>
+                    </li>
+
+
+                    <h3 class="menu-title">Menu</h3><!-- /.menu-title -->
+                    <li>
+                        <a href="offline-mode.html"> <i class="menu-icon fa fa-laptop"></i>Offline Mode </a>
+                    </li>
+                    <li>
+                        <a href="clusters.html"> <i class="menu-icon fa fa-th"></i>Clusters </a>
+                    </li>
+                    <li>
+                        <a href="ivr_builder.html"> <i class="menu-icon fa fa-headphones"></i>IVR Builder </a>
+                    </li>
+                    <li>
+                        <a href="index.html"> <i class="menu-icon fa fa-magic"></i>API Wizard </a>
+                    </li>
+                    <li>
+                        <a href="index.html"> <i class="menu-icon fa fa-clock-o"></i>Real Time </a>
+                    </li>
+                    <li>
+                        <a href="index.html"> <i class="menu-icon fa fa-bar-chart-o"></i>Historical Reports </a>
+                    </li>
+                    <li>
+                        <a href="index.html"> <i class="menu-icon fa fa-sitemap"></i>Enterprises </a>
+                    </li>
+        </nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Right Panel -->
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header" style="width: 50%">
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+                        <div class="form-inline">
+                            <form class="search-form">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..."
+                                    aria-label="Search">
+                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                            </form>
+                        </div>
+
+                        <div class="dropdown for-notification">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="notification"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-bell"></i>
+                                <span class="count bg-danger">5</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="notification">
+                                <p class="red">You have 3 Notification</p>
+                                <a class="dropdown-item media bg-flat-color-1" href="#">
+                                    <i class="fa fa-check"></i>
+                                    <p>Server #1 overloaded.</p>
+                                </a>
+                                <a class="dropdown-item media bg-flat-color-4" href="#">
+                                    <i class="fa fa-info"></i>
+                                    <p>Server #2 overloaded.</p>
+                                </a>
+                                <a class="dropdown-item media bg-flat-color-5" href="#">
+                                    <i class="fa fa-warning"></i>
+                                    <p>Server #3 overloaded.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+
+                            <a class="nav-link" href="#"><i class="fa fa-user"></i> Notifications <span
+                                    class="count">13</span></a>
+
+                            <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
+
+                            <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </header>
+
+        <body>
+            <!-- from here till end - is Snir and Oren Work-->
+            <!--buttons of Operators (all of them Drag&Drop)-->
+            <div class="row" style="height:30px;margin-left: 0px; margin-bottom:0.5%">
+                <div class="draggable_operator shadowbox snir" data-nb-inputs="1" data-nb-outputs="2"
+                    data-class="flowchart-logic">Logic</div>
+                <div class="draggable_operator shadowbox" data-nb-inputs="1" data-nb-outputs="1"
+                    data-class="flowchart-play">Play</div>
+                <div class="draggable_operator shadowbox" data-nb-inputs="1" data-nb-outputs="1"
+                    data-class="flowchart-cluster">Cluster</div>
+                <div class="draggable_operator shadowbox" data-nb-inputs="1" data-nb-outputs="0"
+                    data-class="flowchart-route">Route to</div>
+                <div class="draggable_operator shadowbox" data-nb-inputs="1" data-nb-outputs="1" style="width: 89px"
+                    data-class="flowchart-getInput">Get Input</div>
+                <div class="draggable_operator shadowbox" data-nb-inputs="1" data-nb-outputs="0" style="width: 94px;"
+                    data-class="flowchart-disconnect">Disconnect</div>
+                <!--Drop Down (Bootstrap), when click fetch all relevent data from server-->
+                <select class="form-control" onchange="getJsonFileFromServer()" id="FlowChartDropDown"
+                    style="width: 7%; margin-left:1rem ">
+                    <option value='Empty'>- Empty Flow Chart -</option>
+                </select>
+            </div>
+            <!-- this is the "whiteboard" for build the flowchart, and it is scrollable-->
+            <div id="scroll-container">
+                <div id="large-container">
+                    <div class="demo dragscroll" id="ivr">
+                    </div>
+                </div>
+            </div>
+            <!--functional buttons for flowchart s.t save/load to serve, delete, activate and more-->
+            <div class="row" style="height:30px;margin-left: 15px; margin-bottom: 1%">
+                <button type="button" class="button social-button animationDanger" id="delete_selected_button">Delete
+                    Operator</button>
+                <button type="button" class="button social-button animation" id="activate_button">Activate</button>
+                <button type="button" class="button social-button animation" id="saveButton" data-target="#saveAsModal"
+                    data-toggle="modal">Save To Server</button>
+                <button type="button" class="button social-button animationDanger" data-target="#deleteModal"
+                    data-toggle="modal" onclick="initDeleteModal()">Delete From Server</button>
+                <button type="button" class="button social-button animation" id="get_data">Save State</button>
+                <button type="button" class="button social-button animation" id="set_data">Load Last State</button>
+                <button type="button" class="button social-button animation" id="clear">Clear</button>
+                <button id="edit_button" type="button" class="button social-button" data-toggle="modal"
+                    style="display: none;color: red">Edit Operator</button>
+            </div>
+            <div class="row">
+                <textarea cols="50" rows="10" id="printToHTML" style="margin-left: 25px" readonly></textarea>
+            </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.12.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="assets/js/jquery.flowchart.js"></script>
+    <script src="assets/js/filer.js"></script>
+    <script src="assets/js/global.js"></script>
+
+    <!--delete modal-->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel">Choose Files To Delete:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-check" id="FlowChartFiles">
+                        </div>
+                        <input type="reset" value="Reset" style="margin-left: 1rem">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="delete_button" class="btn btn-primary"
+                        data-dismiss="modal">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--save modal-->
+    <div class="modal fade" id="saveAsModal" tabindex="-1" role="dialog" aria-labelledby="saveAsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel">Save Settings</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="file-name" class="col-form-label">Save As:</label>
+                            <input type="text" class="form-control" id="file-name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="server_save_button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--get input modal-->
+    <div class="modal fade" id="getModal" tabindex="-1" role="dialog" aria-labelledby="getModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="getModalLabel">Get Input Settings:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="get-title-name" class="col-form-label">Title:</label>
+                            <input type="text" class="form-control" id="get-title-name">
+                            <label for="get-variable-name" class="col-form-label">Varaible Name:</label>
+                            <input type="text" class="form-control" id="get-variable-name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary save_changes" data-dismiss="modal">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--play modal-->
+    <div class="modal fade" id="playModal" tabindex="-1" role="dialog" aria-labelledby="playModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="playModalLabel">Play Settings:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="play-title-name" class="col-form-label">Title:</label>
+                            <input type="text" class="form-control" id="play-title-name">
+                            <label for="play-wav-name" class="col-form-label">Play:</label>
+                            <input type="text" class="form-control" id="play-wav-name">
+                            <label for="play-tts-name" class="col-form-label">Say:</label>
+                            <input type="text" class="form-control" id="play-tts-name">
+                            <label for="play-time-name" class="col-form-label">Time Out:</label>
+                            <input type="text" class="form-control" id="play-time-name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary save_changes" data-dismiss="modal">
+                        Apply
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--logic modal-->
+    <div class="modal fade" id="logicModal" tabindex="-1" role="dialog" aria-labelledby="logicModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item ">
+                            <a class="nav-link active" data-toggle="tab" href="#General"><strong>General</strong></a>
+                        </li>
+                        <li class="nav-item" onclick="onOutputChange()">
+                            <a class="nav-link" data-toggle="tab" href="#Logic"><strong>Output Values</strong></a>
+                        </li>
+                    </ul>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="General">
+                            <label for="logic-title-name" class="col-form-label">Title:</label>
+                            <input type="text" class="form-control" id="logic-title-name">
+                            <label for="logic-outputs-name" class="col-form-label">Outputs:</label>
+                            <input type="number" min="1" class="form-control" id="logic-outputs-name">
+                        </div>
+                        <div class="tab-pane " id="Logic">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary save_changes" data-dismiss="modal">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--route modal-->
+    <div class="modal fade" id="routeModal" tabindex="-1" role="dialog" aria-labelledby="routeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="routeModalLabel">Route To Settings:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="route-title-name" class="col-form-label">Title:</label>
+                            <input type="text" class="form-control" id="route-title-name">
+                            <label for="route-route-name" class="col-form-label">Route to:</label>
+                            <input type="tel" class="form-control" id="route-route-name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary save_changes" data-dismiss="modal">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--cluster modal-->
+    <div class="modal fade" id="clusterModal" tabindex="-1" role="dialog" aria-labelledby="clusterModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="clusterModalLabel">Cluster Settings:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="cluster-title-name" class="col-form-label">Title:</label>
+                            <input type="text" class="form-control" id="cluster-title-name">
+                            <label for="cluster-name" class="col-form-label">Use Cluster:</label>
+                            <select class="form-control" id="clusterDropDown">
+                                <option value='Empty'>- Choose Cluster -</option>
+                            </select>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary save_changes" data-dismiss="modal">Apply
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('html').keydown(function (e) {
+                // when press delete/backspace on keyboard delete selected operator
+                if (e.keyCode == 46 || e.keyCode == 8) {
+                    $('#ivr').flowchart('deleteSelected');
+                }
+            });
+            // initalized data (always has start operator)
+            var data = {
+                operators: {
+                    Start: {
+                        top: 10,
+                        left: 10,
+                        properties: {
+                            title: 'Start',
+                            inputs: {},
+                            outputs: {
+                                output_1: {
+                                    label: '',
+                                }
+                            },
+                            class: 'Start',
+
+                        }
+                    }
+                }
+            };
+            // this is the operator var, when we drag one 
+            var $draggableOperators = $('.draggable_operator');
+
+            //Init the clusters
+            var clusters = {}
+            /**
+             * notice this is for local use!
+             * if you want to work on server - change here to config.server
+             */
+            let config = clientConfig()
+            const url = config.local + "GetClusters";
+            // get all exists clusters from sever
+            fetch(url, {
+                method: 'get'
+            })
+                .then(data => { return data.json() })
+                .then(res => {
+                    if (res.msg == 'OK') {
+                        res.clustersName.forEach(element => {
+                            var o = new Option(element, "value");
+                            o.value = element;
+                            $(o).html(element);
+                            $("#clusterDropDown").append(o);
+                        });
+                        clusters = res.clustersContent;
+                        $('#ivr').flowchart('setClusters', clusters);
+                    } else if (res.msg == 'Failed') {
+                        alert('Failed To Get The Clusters - Internal Server Error')
+                    }
+                })
+                .catch(function () {
+                    alert('Failed To Get The Clusters - Server Is Off')
+                })
+
+            //Get all json files name from server
+            getJsonFileName()
+
+
+            //this gets the data from the Drag&Drop buttons
+            function getOperatorData($element) {
+                var nbInputs = parseInt($element.data('nb-inputs'));
+                var nbOutputs = parseInt($element.data('nb-outputs'));
+                var op_class = $element.data('class');
+
+                var data = {
+                    id: $('#ivr').flowchart('getOperatorNum'),
+                    properties: {
+                        title: $element.text(),
+                        inputs: {},
+                        outputs: {},
+                        return_type: '',
+                        class: op_class,
+                        tts: '',
+                        wav: '',
+                        time: '',
+                        route: '',
+                        cluster: '',
+                        variable_name: ''
+                    }
+                };
+                // all operators have only one input
+                data.properties.inputs['input_0'] = {
+                    label: ''
+                };
+                // operator can have 1 or more outouts, in logic we can esit them!
+                for (let i = 0; i < nbOutputs; i++) {
+                    let prefix = '';
+                    if(op_class == 'flowchart-logic'){
+                        prefix = 'Edit'
+                    }
+
+                    data.properties.outputs['output_' + i] = {                       
+                        label: prefix
+
+                    };
+                }
+                return data;
+            }
+
+            var operatorId = 0;
+            // this function works when drag a dragable operator
+            $draggableOperators.draggable({
+                cursor: "move",
+                opacity: 0.7,
+
+                helper: 'clone',
+                appendTo: 'body',
+                zIndex: 1000,
+
+                helper: function (e) {
+                    var $this = $(this);
+                    var data = getOperatorData($this);
+                    return $('#ivr').flowchart('getOperatorElement', data);
+                },
+                stop: function (e, ui) {
+                    var $this = $(this);
+                    var elOffset = ui.offset;
+                    var containerOffset = $('#ivr').offset();
+                    if (elOffset.left > containerOffset.left &&
+                        elOffset.top > containerOffset.top &&
+                        elOffset.left < containerOffset.left + $('#ivr').width() &&
+                        elOffset.top < containerOffset.top + $('#ivr').height()) {
+
+                        var flowchartOffset = $('#ivr').offset();
+
+                        var relativeLeft = elOffset.left - flowchartOffset.left;
+                        var relativeTop = elOffset.top - flowchartOffset.top;
+
+                        var positionRatio = $('#ivr').flowchart('getPositionRatio');
+                        relativeLeft /= positionRatio;
+                        relativeTop /= positionRatio;
+
+                        var data = getOperatorData($this);
+                        data.left = relativeLeft;
+                        data.top = relativeTop;
+
+                        $('#ivr').flowchart('addOperator', data);
+                    }
+                }
+            });
+
+            // Apply the plugin on a standard, empty div...
+            $('#ivr').flowchart({
+                data: data
+            });
+            // init all
+            initButtonsEvent();
+        });
+
+        
+    </script>
+</body>
+
+<script src="vendors/jquery/dist/jquery.min.js"></script>
+<script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+<script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
+<script src="assets/js/dashboard.js"></script>
+<script src="assets/js/widgets.js"></script>
+<script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
+<script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+<script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+<script>
+    (function ($) {
+        "use strict";
+        jQuery('#vmap').vectorMap({
+            map: 'world_en',
+            backgroundColor: null,
+            color: '#ffffff',
+            hoverOpacity: 0.7,
+            selectedColor: '#1de9b6',
+            enableZoom: true,
+            showTooltip: true,
+            values: sample_data,
+            scaleColors: ['#1de9b6', '#03a9f5'],
+            normalizeFunction: 'polynomial'
+        });
+    })(jQuery);
+</script>
+
+</body>
+
+</html>

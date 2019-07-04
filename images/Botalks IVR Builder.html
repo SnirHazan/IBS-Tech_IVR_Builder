@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<!-- saved from url=(0079)file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/ivr_builder.html -->
+<html class="no-js" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Botalks IVR Builder</title>
+    <meta name="description" content="Botalks">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/apple-icon.png">
+    <link rel="shortcut icon" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/images/logoBotalks2.png">
+
+    <link rel="stylesheet" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/vendors/jqvmap/dist/jqvmap.min.css">
+
+
+    <link rel="stylesheet" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/assets/css/style.css">
+
+    <link href="./Botalks IVR Builder_files/css" rel="stylesheet" type="text/css">
+
+
+    <link href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/assets/css/jquery.flowchart.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            background-color: #fafafa;
+        }
+
+        .container {
+            margin: 150px auto;
+        }
+
+        .demo {
+            background-color: bisque;
+            border-color: black;
+            width: 82%;
+            height: 80%;
+            margin-left: 20px;
+            position: sticky;
+        }
+
+        .draggable_operator {
+            display: inline-block;
+            margin-left: 20px;
+            padding: 2px 5px 2px 5px;
+            border: 1px solid #ccc;
+            cursor: grab;
+            user-select: none;
+        }
+    </style>
+    <style>
+        label,
+        input {
+            display: block;
+        }
+
+        input.text {
+            margin-bottom: 12px;
+            width: 95%;
+            padding: .4em;
+        }
+
+        fieldset {
+            padding: 0;
+            border: 0;
+            margin-top: 25px;
+        }
+
+        h1 {
+            font-size: 1.2em;
+            margin: .6em 0;
+        }
+
+        div#users-contain {
+            width: 350px;
+            margin: 20px 0;
+        }
+
+        div#users-contain table {
+            margin: 1em 0;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        div#users-contain table td,
+        div#users-contain table th {
+            border: 1px solid #eee;
+            padding: .6em 10px;
+            text-align: left;
+        }
+
+        .ui-dialog .ui-state-error {
+            padding: .3em;
+        }
+
+        .validateTips {
+            border: 1px solid transparent;
+            padding: 0.3em;
+        }
+    </style>
+<style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
+
+<body class="" style="cursor: auto;">
+
+
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/"><img src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/images/logoBotalks.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/"><img src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/images/logoBotalks2.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/index.html"> <i class="menu-icon fa ti-home"></i>Home Page </a>
+                    </li>
+
+
+                    <h3 class="menu-title">Menu</h3><!-- /.menu-title -->
+                    <li>
+                        <a href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/offline-mode.html"> <i class="menu-icon fa fa-laptop"></i>Offline Mode </a>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/clusters.html"> <i class="menu-icon fa fa-th"></i>Clusters </a>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/ivr_builder.html"> <i class="menu-icon fa fa-headphones"></i>IVR Builder </a>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/index.html"> <i class="menu-icon fa fa-magic"></i>API Wizard </a>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/index.html"> <i class="menu-icon fa fa-clock-o"></i>Real Time </a>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/index.html"> <i class="menu-icon fa fa-bar-chart-o"></i>Historical Reports </a>
+                    </li>
+                    <li>
+                        <a href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/index.html"> <i class="menu-icon fa fa-sitemap"></i>Enterprises </a>
+                    </li>
+        </ul></div></nav>
+    </aside><!-- /#left-panel -->
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <div class="header-left">
+                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+                        <div class="form-inline">
+                            <form class="search-form">
+                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+                            </form>
+                        </div>
+
+                        <div class="dropdown for-notification">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-bell"></i>
+                                <span class="count bg-danger">5</span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="notification">
+                                <p class="red">You have 3 Notification</p>
+                                <a class="dropdown-item media bg-flat-color-1" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/ivr_builder.html#">
+                                    <i class="fa fa-check"></i>
+                                    <p>Server #1 overloaded.</p>
+                                </a>
+                                <a class="dropdown-item media bg-flat-color-4" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/ivr_builder.html#">
+                                    <i class="fa fa-info"></i>
+                                    <p>Server #2 overloaded.</p>
+                                </a>
+                                <a class="dropdown-item media bg-flat-color-5" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/ivr_builder.html#">
+                                    <i class="fa fa-warning"></i>
+                                    <p>Server #3 overloaded.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/ivr_builder.html#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/images/admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/ivr_builder.html#"><i class="fa fa-user"></i> My Profile</a>
+
+                            <a class="nav-link" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/ivr_builder.html#"><i class="fa fa-user"></i> Notifications <span class="count">13</span></a>
+
+                            <a class="nav-link" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/ivr_builder.html#"><i class="fa fa-cog"></i> Settings</a>
+
+                            <a class="nav-link" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/ivr_builder.html#"><i class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </header>
+
+        
+            <div class="container-fluid">
+
+            </div>
+            <div class="row" style="height:30px;margin-left: 0px; margin-bottom: 1%">
+                <div class="draggable_operator shadowbox snir ui-draggable ui-draggable-handle" data-nb-inputs="1" data-nb-outputs="2" data-class="flowchart-logic">Logic</div>
+                <div class="draggable_operator shadowbox ui-draggable ui-draggable-handle" data-nb-inputs="1" data-nb-outputs="1" data-class="flowchart-play">Play</div>
+                <div class="draggable_operator shadowbox ui-draggable ui-draggable-handle" data-nb-inputs="1" data-nb-outputs="0" data-class="flowchart-route">Route to</div>
+                <div class="draggable_operator shadowbox ui-draggable ui-draggable-handle" data-nb-inputs="1" data-nb-outputs="0" style="width: 94px;" data-class="flowchart-disconnect">Disconnect</div>
+                <div class="draggable_operator shadowbox ui-draggable ui-draggable-handle" data-nb-inputs="1" data-nb-outputs="1" data-class="flowchart-cluster">Cluster</div>
+                <div class="draggable_operator shadowbox ui-draggable ui-draggable-handle" data-nb-inputs="1" data-nb-outputs="1" style="width: 89px" data-class="flowchart-getInput">Get Input</div>
+                <select class="form-control" onchange="getJsonFileFromServer()" id="FlowChartDropDown" style="width: 15%; margin-left:1rem ">
+                    <option value="Empty">- Empty Flow Chart -</option>
+                <option value="AnotherOne">AnotherOne</option><option value="Flow_Chart_Json">Flow_Chart_Json</option><option value="Good Flow Chart">Good Flow Chart</option></select>
+            </div>
+            <div class="row" style="margin-left: 0px; margin-bottom: 1%">
+                <div class="demo" id="ivr">
+                    <img class="img-fluid" src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/images/background.jpg" style="width:100%;height: auto;">
+                <svg class="flowchart-links-layer"><g><mask id="fc_mask_0_73"><rect x="0" y="0" width="100%" height="100%" stroke="none" fill="white"></rect><polygon stroke="none" fill="black" points="133,55 146,68 133,81"></polygon></mask><g class="flowchart-link" data-link_id="0"><path stroke-width="5" fill="none" d="M146,68 C226,68 120,148 201,148" stroke="#ff0000"></path><rect stroke="none" mask="url(#fc_mask_0_73)" x="133" y="65.5" width="14" height="5" fill="#ff0000"></rect></g></g><g><mask id="fc_mask_0_74"><rect x="0" y="0" width="100%" height="100%" stroke="none" fill="white"></rect><polygon stroke="none" fill="black" points="313,135 326,148 313,161"></polygon></mask><g class="flowchart-link" data-link_id="1"><path stroke-width="5" fill="none" d="M326,148 C426,148 340,348.00001525878906 441,348.00001525878906" stroke="#ff0000"></path><rect stroke="none" mask="url(#fc_mask_0_74)" x="313" y="145.5" width="14" height="5" fill="#ff0000"></rect></g></g><g><mask id="fc_mask_0_75"><rect x="0" y="0" width="100%" height="100%" stroke="none" fill="white"></rect><polygon stroke="none" fill="black" points="589,335.00001525878906 602,348.00001525878906 589,361.00001525878906"></polygon></mask><g class="flowchart-link" data-link_id="2"><path stroke-width="5" fill="none" d="M602,348.00001525878906 C702,348.00001525878906 640,168 741,168" stroke="#ff0000"></path><rect stroke="none" mask="url(#fc_mask_0_75)" x="589" y="345.50001525878906" width="14" height="5" fill="#ff0000"></rect></g></g><g><mask id="fc_mask_0_76"><rect x="0" y="0" width="100%" height="100%" stroke="none" fill="white"></rect><polygon stroke="none" fill="black" points="589,355.00001525878906 602,368.00001525878906 589,381.00001525878906"></polygon></mask><g class="flowchart-link" data-link_id="3"><path stroke-width="5" fill="none" d="M602,368.00001525878906 C702,368.00001525878906 920,308.00001525878906 1021,308.00001525878906" stroke="#ff0000"></path><rect stroke="none" mask="url(#fc_mask_0_76)" x="589" y="365.50001525878906" width="14" height="5" fill="#ff0000"></rect></g></g><g><mask id="fc_mask_0_77"><rect x="0" y="0" width="100%" height="100%" stroke="none" fill="white"></rect><polygon stroke="none" fill="black" points="853,155 866,168 853,181"></polygon></mask><g class="flowchart-link" data-link_id="4"><path stroke-width="5" fill="none" d="M866,168 C966,168 920,308.00001525878906 1021,308.00001525878906" stroke="#ff0000"></path><rect stroke="none" mask="url(#fc_mask_0_77)" x="853" y="165.5" width="14" height="5" fill="#ff0000"></rect></g></g><g><mask id="fc_mask_0_78"><rect x="0" y="0" width="100%" height="100%" stroke="none" fill="white"></rect><polygon stroke="none" fill="black" points="589,375.00001525878906 602,388.00001525878906 589,401.00001525878906"></polygon></mask><g class="flowchart-link" data-link_id="5"><path stroke-width="5" fill="none" d="M602,388.00001525878906 C702,388.00001525878906 640,528.0000152587891 741,528.0000152587891" stroke="#ff0000"></path><rect stroke="none" mask="url(#fc_mask_0_78)" x="589" y="385.50001525878906" width="14" height="5" fill="#ff0000"></rect></g></g><g><mask id="fc_mask_0_79"><rect x="0" y="0" width="100%" height="100%" stroke="none" fill="white"></rect><polygon stroke="none" fill="black" points="853,515.0000152587891 866,528.0000152587891 853,541.0000152587891"></polygon></mask><g class="flowchart-link" data-link_id="6"><path stroke-width="5" fill="none" d="M866,528.0000152587891 C926,528.0000152587891 840,468.00001525878906 901,468.00001525878906" stroke="#ff0000"></path><rect stroke="none" mask="url(#fc_mask_0_79)" x="853" y="525.5000152587891" width="14" height="5" fill="#ff0000"></rect></g></g><g><mask id="fc_mask_0_80"><rect x="0" y="0" width="100%" height="100%" stroke="none" fill="white"></rect><polygon stroke="none" fill="black" points="1013,455.00001525878906 1026,468.00001525878906 1013,481.00001525878906"></polygon></mask><g class="flowchart-link" data-link_id="7"><path stroke-width="5" fill="none" d="M1026,468.00001525878906 C1126,468.00001525878906 920,308.00001525878906 1021,308.00001525878906" stroke="#ff0000"></path><rect stroke="none" mask="url(#fc_mask_0_80)" x="1013" y="465.50001525878906" width="14" height="5" fill="#ff0000"></rect></g></g><g><mask id="fc_mask_0_81"><rect x="0" y="0" width="100%" height="100%" stroke="none" fill="white"></rect><polygon stroke="none" fill="black" points="589,395 602,408 589,421"></polygon></mask><g class="flowchart-link" data-link_id="8"><path stroke-width="5" fill="none" d="M602,408 C702,408 800,468 901,468" stroke="#ff0000"></path><rect stroke="none" mask="url(#fc_mask_0_81)" x="589" y="405.5" width="14" height="5" fill="#ff0000"></rect></g></g></svg><div class="flowchart-operators-layer unselectable"><div class="flowchart-operator flowchart-play ui-draggable" style="top: 100px; left: 200px;"><div class="flowchart-operator-title ui-draggable-handle">Play</div><div class="flowchart-operator-inputs-outputs"><div class="flowchart-operator-inputs"><div class="flowchart-operator-connector-set"><div class="flowchart-operator-connector"><div class="flowchart-operator-connector-label"></div><div class="flowchart-operator-connector-arrow"></div><div class="flowchart-operator-connector-small-arrow" style="border-left-color: rgb(255, 0, 0);"></div></div></div></div><div class="flowchart-operator-outputs"><div class="flowchart-operator-connector-set"><div class="flowchart-operator-connector"><div class="flowchart-operator-connector-label"></div><div class="flowchart-operator-connector-arrow"></div><div class="flowchart-operator-connector-small-arrow" style="border-left-color: rgb(255, 0, 0);"></div></div></div></div></div></div><div class="flowchart-operator flowchart-logic ui-draggable" style="top: 300px; left: 440px;"><div class="flowchart-operator-title ui-draggable-handle">Logic</div><div class="flowchart-operator-inputs-outputs"><div class="flowchart-operator-inputs"><div class="flowchart-operator-connector-set"><div class="flowchart-operator-connector"><div class="flowchart-operator-connector-label"></div><div class="flowchart-operator-connector-arrow"></div><div class="flowchart-operator-connector-small-arrow" style="border-left-color: rgb(255, 0, 0);"></div></div></div></div><div class="flowchart-operator-outputs"><div class="flowchart-operator-connector-set"><div class="flowchart-operator-connector"><div class="flowchart-operator-connector-label">Output 1</div><div class="flowchart-operator-connector-arrow"></div><div class="flowchart-operator-connector-small-arrow" style="border-left-color: rgb(255, 0, 0);"></div></div></div><div class="flowchart-operator-connector-set"><div class="flowchart-operator-connector"><div class="flowchart-operator-connector-label">Output 2</div><div class="flowchart-operator-connector-arrow"></div><div class="flowchart-operator-connector-small-arrow" style="border-left-color: rgb(255, 0, 0);"></div></div></div><div class="flowchart-operator-connector-set"><div class="flowchart-operator-connector"><div class="flowchart-operator-connector-label">Output 3</div><div class="flowchart-operator-connector-arrow"></div><div class="flowchart-operator-connector-small-arrow" style="border-left-color: rgb(255, 0, 0);"></div></div></div><div class="flowchart-operator-connector-set"><div class="flowchart-operator-connector"><div class="flowchart-operator-connector-label">Output 4</div><div class="flowchart-operator-connector-arrow"></div><div class="flowchart-operator-connector-small-arrow" style="border-left-color: rgb(255, 0, 0);"></div></div></div></div></div></div><div class="flowchart-operator flowchart-play ui-draggable" style="top: 120px; left: 740px;"><div class="flowchart-operator-title ui-draggable-handle">Play</div><div class="flowchart-operator-inputs-outputs"><div class="flowchart-operator-inputs"><div class="flowchart-operator-connector-set"><div class="flowchart-operator-connector"><div class="flowchart-operator-connector-label"></div><div class="flowchart-operator-connector-arrow"></div><div class="flowchart-operator-connector-small-arrow" style="border-left-color: rgb(255, 0, 0);"></div></div></div></div><div class="flowchart-operator-outputs"><div class="flowchart-operator-connector-set"><div class="flowchart-operator-connector"><div class="flowchart-operator-connector-label"></div><div class="flowchart-operator-connector-arrow"></div><div class="flowchart-operator-connector-small-arrow" style="border-left-color: rgb(255, 0, 0);"></div></div></div></div></div></div><div class="flowchart-operator flowchart-disconnect ui-draggable" style="top: 260px; left: 1020px;"><div class="flowchart-operator-title ui-draggable-handle">Disconnect</div><div class="flowchart-operator-inputs-outputs"><div class="flowchart-operator-inputs"><div class="flowchart-operator-connector-set"><div class="flowchart-operator-connector"><div class="flowchart-operator-connector-label"></div><div class="flowchart-operator-connector-arrow"></div><div class="flowchart-operator-connector-small-arrow" style="border-left-color: rgb(255, 0, 0);"></div></div></div></div><div class="flowchart-operator-outputs"></div></div></div><div class="flowchart-operator flowchart-cluster ui-draggable" style="top: 480px; left: 740px;"><div class="flowchart-operator-title ui-draggable-handle">Cluster</div><div class="flowchart-operator-inputs-outputs"><div class="flowchart-operator-inputs"><div class="flowchart-operator-connector-set"><div class="flowchart-operator-connector"><div class="flowchart-operator-connector-label"></div><div class="flowchart-operator-connector-arrow"></div><div class="flowchart-operator-connector-small-arrow" style="border-left-color: rgb(255, 0, 0);"></div></div></div></div><div class="flowchart-operator-outputs"><div class="flowchart-operator-connector-set"><div class="flowchart-operator-connector"><div class="flowchart-operator-connector-label"></div><div class="flowchart-operator-connector-arrow"></div><div class="flowchart-operator-connector-small-arrow" style="border-left-color: rgb(255, 0, 0);"></div></div></div></div></div></div><div class="flowchart-operator flowchart-play ui-draggable" style="top: 420px; left: 900px;"><div class="flowchart-operator-title ui-draggable-handle">Play</div><div class="flowchart-operator-inputs-outputs"><div class="flowchart-operator-inputs"><div class="flowchart-operator-connector-set"><div class="flowchart-operator-connector"><div class="flowchart-operator-connector-label"></div><div class="flowchart-operator-connector-arrow"></div><div class="flowchart-operator-connector-small-arrow" style="border-left-color: rgb(255, 0, 0);"></div></div></div></div><div class="flowchart-operator-outputs"><div class="flowchart-operator-connector-set"><div class="flowchart-operator-connector"><div class="flowchart-operator-connector-label"></div><div class="flowchart-operator-connector-arrow"></div><div class="flowchart-operator-connector-small-arrow" style="border-left-color: rgb(255, 0, 0);"></div></div></div></div></div></div><div class="flowchart-operator ui-draggable" style="top: 20px; left: 20px;"><div class="flowchart-operator-title ui-draggable-handle">Start</div><div class="flowchart-operator-inputs-outputs"><div class="flowchart-operator-inputs"></div><div class="flowchart-operator-outputs"><div class="flowchart-operator-connector-set"><div class="flowchart-operator-connector"><div class="flowchart-operator-connector-label"></div><div class="flowchart-operator-connector-arrow"></div><div class="flowchart-operator-connector-small-arrow" style="border-left-color: rgb(255, 0, 0);"></div></div></div></div></div></div></div><svg class="flowchart-temporary-link-layer" style="display: none;"><line x1="599" y1="410" x2="908" y2="469.3958320617676" stroke-dasharray="6,6" stroke-width="4" stroke="red" fill="none"></line></svg></div>
+            </div>
+            <div class="row" style="height:30px;margin-left: 15px; margin-bottom: 1%">
+                <button type="button" class="button social-button animationDanger" id="delete_selected_button">Delete
+                    Operator</button>
+                <button type="button" class="button social-button animation" id="activate_button">Activate</button>
+                <button type="button" class="button social-button animation" data-target="#saveAsModal" data-toggle="modal">Save To Server</button>
+                <button type="button" class="button social-button animation" data-target="#deleteModal" data-toggle="modal" onclick="initDeleteModal()">Delete From Server</button>
+                <button type="button" class="button social-button animation" id="get_data">Save State</button>
+                <button type="button" class="button social-button animation" id="set_data">Load Last State</button>
+                <button type="button" class="button social-button animation" id="clear">Clear</button>
+                <!-- <button type="button" class="button social-button animation" id="create_obj">Create Obj</button> -->
+                <button id="edit_button" type="button" class="button social-button" data-toggle="modal" style="display: none; color: red;" data-target="#logicModal">Edit Operator</button>
+            </div>
+
+            <div class="row" style="margin-left: 20px;width: 700px">
+                <div id="operator_properties" style="display: none;border-style: solid;
+                    border-color:black; padding: 10px; margin-top: 2px;">
+                    <label for="operator_title">Operator's Title:</label>
+                    <input type="text" id="operator_title">
+                    <div id="return_type_label" style="display: none">
+                        <label for="operator_return_type">Operator's Return Type:</label>
+                        <input type="text" id="operator_return_type" readonly="">
+                    </div>
+
+                </div>
+                <!-- <div id="link_properties" style="display: none;border-style: solid;
+                    border-color:black; padding: 10px; margin-top: 2px">
+                    <label for="link_color">Link's Color:</label>
+                    <input type="color" id="link_color">
+                </div> -->
+            </div>
+            <!-- <div class="row" style="margin-left:20px;width: 700px; margin-top: 10px">
+                <textarea id="flowchart_data" style="position: relative;
+                 line-height: 22.5px; font-size: 15px;background: transparent
+                 !important;width:700px;height: 300px;"></textarea>
+            </div> -->
+    </div>
+
+    <script src="./Botalks IVR Builder_files/jquery-1.12.2.min.js.הורדה"></script>
+    <script src="./Botalks IVR Builder_files/jquery-ui.min.js.הורדה"></script>
+    <script src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/assets/js/jquery.flowchart.js"></script>
+    <script src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/assets/js/Question.js"></script>
+    <script src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/assets/js/filer.js"></script>
+
+    <!--delete modal-->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel">Choose Files To Delete:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-check" id="FlowChartFiles"><div class="form-check"><input class="form-check-input" type="checkbox" value="AnotherOne"><label class="form-check-label">AnotherOne</label><input class="form-check-input" type="checkbox" value="Flow_Chart_Json"><label class="form-check-label">Flow_Chart_Json</label><input class="form-check-input" type="checkbox" value="Good Flow Chart"><label class="form-check-label">Good Flow Chart</label><input class="form-check-input" type="checkbox" value="sad"><label class="form-check-label">sad</label></div></div>
+                        <input type="reset" value="Reset" style="margin-left: 1rem">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="delete_button" class="btn btn-primary" data-dismiss="modal">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--save modal-->
+    <div class="modal fade" id="saveAsModal" tabindex="-1" role="dialog" aria-labelledby="saveAsModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel">Save Settings</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="file-name" class="col-form-label">Save As:</label>
+                            <input type="text" class="form-control" id="file-name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="save_button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--get input modal-->
+    <div class="modal fade" id="getModal" tabindex="-1" role="dialog" aria-labelledby="getModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="getModalLabel">Get Input Settings:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                                <label for="get-title-name" class="col-form-label">Title:</label>
+                                <input type="text" class="form-control" id="get-title-name">
+                                <label for="get-variable-name" class="col-form-label">Varaible Name:</label>
+                                <input type="text" class="form-control" id="get-variable-name">                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary save_changes" data-dismiss="modal">save
+                        changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--play modal-->
+    <div class="modal fade" id="playModal" tabindex="-1" role="dialog" aria-labelledby="playModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="playModalLabel">Play Settings:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="play-title-name" class="col-form-label">Title:</label>
+                            <input type="text" class="form-control" id="play-title-name">
+                            <label for="play-wav-name" class="col-form-label">Play:</label>
+                            <input type="text" class="form-control" id="play-wav-name">
+                            <label for="play-tts-name" class="col-form-label">Say:</label>
+                            <input type="text" class="form-control" id="play-tts-name">
+                            <label for="play-time-name" class="col-form-label">Time Out:</label>
+                            <input type="text" class="form-control" id="play-time-name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary save_changes" data-dismiss="modal">save
+                        changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--logic modal-->
+    <div class="modal fade" id="logicModal" tabindex="-1" role="dialog" aria-labelledby="logicModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item ">
+                            <a class="nav-link active" data-toggle="tab" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/ivr_builder.html#General"><strong>General</strong></a>
+                        </li>
+                        <li class="nav-item" onclick="onOutputChange()">
+                            <a class="nav-link" data-toggle="tab" href="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/ivr_builder.html#Logic"><strong>I/O Labels</strong></a>
+                        </li>
+                    </ul>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="General">
+                            <label for="logic-title-name" class="col-form-label">Title:</label>
+                            <input type="text" class="form-control" id="logic-title-name">
+                            <label for="logic-outputs-name" class="col-form-label">Outputs:</label>
+                            <input type="number" min="1" class="form-control" id="logic-outputs-name">
+                            <label for="logic-return-name" class="col-form-label">Return Type:</label>
+                            <input type="text" class="form-control" id="logic-return-name">
+                        </div>
+                        <div class="tab-pane " id="Logic">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary save_changes" data-dismiss="modal">save
+                        changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--route modal-->
+    <div class="modal fade" id="routeModal" tabindex="-1" role="dialog" aria-labelledby="routeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="routeModalLabel">Route To Settings:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="route-title-name" class="col-form-label">Title:</label>
+                            <input type="text" class="form-control" id="route-title-name">
+                            <label for="route-route-name" class="col-form-label">Route to:</label>
+                            <input type="tel" class="form-control" id="route-route-name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary save_changes" data-dismiss="modal">save
+                        changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--cluster modal-->
+    <div class="modal fade" id="clusterModal" tabindex="-1" role="dialog" aria-labelledby="clusterModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="clusterModalLabel">Cluster Settings:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="cluster-title-name" class="col-form-label">Title:</label>
+                            <input type="text" class="form-control" id="cluster-title-name">
+                            <label for="cluster-name" class="col-form-label">Use Cluster:</label>
+                            <select class="form-control" id="clusterDropDown">
+                                <option value="Empty">- Choose Cluster -</option>
+                            <option value="Change_Address">Change_Address</option><option value="Pay_Debt_To_Police">Pay_Debt_To_Police</option><option value="Pay_Water_Bill">Pay_Water_Bill</option></select>
+                    
+                </div></form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary save_changes" data-dismiss="modal">save
+                        changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            $('html').keydown(function (e) {
+                if (e.keyCode == 46) {
+                    $('#ivr').flowchart('deleteSelected');
+                }
+            });
+            var data = {
+                operators: {
+                    Start: {
+                        top: 10,
+                        left: 10,
+                        properties: {
+                            title: 'Start',
+                            inputs: {},
+                            outputs: {
+                                output_1: {
+                                    label: '',
+                                }
+                            },
+                            class: 'Start',
+                            tts: '',
+                            wav: '',
+                            return_type: '',
+
+
+                        }
+                    }
+                }
+            };
+
+
+            var $operatorProperties = $('#operator_properties');
+            var $linkProperties = $('#link_properties');
+            var $operatorTitle = $('#operator_title');
+            var $linkColor = $('#link_color');
+            var $operatorReturnType = $('#operator_return_type');
+            /*
+            var $wav = $('#wav-name');
+            var $tts = $('#tts-name');
+            */
+            var $draggableOperators = $('.draggable_operator');
+
+            //Init the clusters
+            var clusters = {}
+            const url = "http://localhost:3000/api/GetClusters";
+            fetch(url, {
+                method: 'get'
+            })
+                .then(data => { return data.json() })
+                .then(res => {
+                    res.clustersName.forEach(element => {
+                        var o = new Option(element, "value");
+                        o.value = element;
+                        $(o).html(element);
+                        $("#clusterDropDown").append(o);
+                    });
+                    clusters = res.clustersContent;
+                    $('#ivr').flowchart('setClusters', clusters);
+
+                }).catch(function () {
+                    alert('Failed To Get The Clusters - Server Is Off')
+                })
+
+                //Get all json files name from server
+                getJsonFileName()
+
+
+            //this gets the data from the D&D buttons
+            function getOperatorData($element) {
+                var nbInputs = parseInt($element.data('nb-inputs'));
+                var nbOutputs = parseInt($element.data('nb-outputs'));
+                var op_class = $element.data('class');
+                var ret_type;
+                var outputLabel = ''
+
+                if (op_class == 'flowchart-play') {
+                    ret_type = 'string';
+                } else ret_type = 'int';
+                var data = {
+                    id: $('#ivr').flowchart('getOperatorNum'),
+                    properties: {
+                        title: $element.text(),
+                        inputs: {},
+                        outputs: {},
+                        return_type: ret_type,
+                        class: op_class,
+                        tts: '',
+                        wav: '',
+                        time: '',
+                        route: '',
+                        cluster: '',
+                        variable_name: ''
+                    }
+                };
+
+                var i = 0;
+                for (i = 0; i < nbInputs; i++) {
+                    data.properties.inputs['input_' + i] = {
+                        label: ''
+                    };
+                }
+                if (op_class == 'flowchart-logic') {
+                    for (i = 0; i < nbOutputs; i++) {
+                        data.properties.outputs['output_' + i] = {
+                            label: 'Output ' + (i + 1)
+                        };
+                    }
+                } else {
+                    for (i = 0; i < nbOutputs; i++) {
+                        data.properties.outputs['output_' + i] = {
+                            label: ''
+                        };
+                    }
+                }
+
+                return data;
+            }
+
+            var operatorId = 0;
+
+            $draggableOperators.draggable({
+                cursor: "move",
+                opacity: 0.7,
+
+                helper: 'clone',
+                appendTo: 'body',
+                zIndex: 1000,
+
+                helper: function (e) {
+                    var $this = $(this);
+                    var data = getOperatorData($this);
+                    return $('#ivr').flowchart('getOperatorElement', data);
+                },
+                stop: function (e, ui) {
+                    var $this = $(this);
+                    var elOffset = ui.offset;
+                    var containerOffset = $('#ivr').offset();
+                    if (elOffset.left > containerOffset.left &&
+                        elOffset.top > containerOffset.top &&
+                        elOffset.left < containerOffset.left + $('#ivr').width() &&
+                        elOffset.top < containerOffset.top + $('#ivr').height()) {
+
+                        var flowchartOffset = $('#ivr').offset();
+
+                        var relativeLeft = elOffset.left - flowchartOffset.left;
+                        var relativeTop = elOffset.top - flowchartOffset.top;
+
+                        var positionRatio = $('#ivr').flowchart('getPositionRatio');
+                        relativeLeft /= positionRatio;
+                        relativeTop /= positionRatio;
+
+                        var data = getOperatorData($this);
+                        data.left = relativeLeft;
+                        data.top = relativeTop;
+
+                        $('#ivr').flowchart('addOperator', data);
+                    }
+                }
+            });
+
+            // Apply the plugin on a standard, empty div...
+            $('#ivr').flowchart({
+                data: data,
+                //data: JSON.parse(localStorage.getItem("data")),
+                //TODO: check what to do with local storage, check if empty maybe?
+                onOperatorSelect: function (operatorId) {
+                    let prop = $('#ivr').flowchart('getOperatorProperties', operatorId);
+
+                    if (prop.class == 'Start') {
+                        return false
+                    }
+                    // display the edit button
+                    $('#edit_button').css('display', 'none');
+                    //remove modal data-target, will rise up dynamicly
+                    $('#edit_button').removeAttr('data-target');
+                    localStorage.setItem("operatorID", operatorId)
+
+                    if (prop.class != 'flowchart-disconnect') {
+                        $('#edit_button').css('display', 'block');
+                    }
+                    //check which modal to upload
+                    if (prop.class == "flowchart-play") {
+                        $('#edit_button').attr('data-target', "#playModal")
+
+                        $('#play-wav-name').val(prop.wav)
+                        $('#play-tts-name').val(prop.tts)
+                        $('#play-title-name').val(prop.title)
+                        $('#play-time-name').val(prop.time)
+
+                        // when choos OP, decide which part to block! tts/wav                            
+                        if ($('#play-wav-name').val() == '' && $('#play-tts-name').val() == '') {
+                            $('#play-tts-name').removeAttr('disabled');
+                            $('#play-wav-name').removeAttr('disabled');
+                        } else if ($('#play-wav-name').val() == '' && $('#play-tts-name').val() != '') {
+                            $('#play-tts-name').removeAttr('disabled');
+                            $('#play-wav-name').attr('disabled', 'disabled');
+                        } else if ($('#play-wav-name').val() != '' && $('#play-tts-name').val() == '') {
+                            $('#play-wav-name').removeAttr('disabled');
+                            $('#play-tts-name').attr('disabled', 'disabled');
+                        }
+
+                    } else if (prop.class == "flowchart-logic") {
+                        $('#edit_button').attr('data-target', "#logicModal")
+                        //init all data from modal
+                        out_size = Object.keys(prop.outputs).length
+                        $('#logic-title-name').val(prop.title)
+                        $('#logic-return-name').val(prop.return_type)
+                        $('#logic-outputs-name').val(out_size)
+
+                    } else if (prop.class == "flowchart-route") {
+                        $('#edit_button').attr('data-target', "#routeModal")
+                        $('#route-title-name').val(prop.title)
+                        $('#route-route-name').val(prop.route)
+
+                    } else if (prop.class == "flowchart-cluster") {
+                        $('#edit_button').attr('data-target', "#clusterModal")
+                        $('#cluster-title-name').val(prop.title)
+                        if (prop.cluster != '') {
+                            $('#clusterDropDown').val(prop.cluster)
+                        } else {
+                            $('#clusterDropDown').val('Empty')
+
+                        }
+                    } else if (prop.class == "flowchart-getInput") {
+                        $('#edit_button').attr('data-target', "#getModal")
+                        $('#get-title-name').val(prop.title)
+                        $('#get-variable-name').val(prop.variable_name)
+                    }
+
+                    return true;
+                },
+                onOperatorUnselect: function () {
+                    $('#edit_button').css('display', 'none');
+                    return true;
+                },
+                onLinkSelect: function (linkId) {
+                    $("#link_properties").css('display', 'block');
+                    $linkColor.val($('#ivr').flowchart('getLinkMainColor', linkId));
+                    return true;
+                },
+                onLinkUnselect: function () {
+                    $("#link_properties").css('display', 'none');
+                    return true;
+                }
+            });
+            $operatorTitle.keyup(function () {
+                var selectedOperatorId = $('#ivr').flowchart('getSelectedOperatorId');
+                if (selectedOperatorId != null) {
+                    $('#ivr').flowchart('setOperatorTitle', selectedOperatorId, $operatorTitle.val());
+                }
+            });
+
+
+            $('#play-wav-name').keyup(function () {
+                if ($('#play-wav-name').val() != '') {
+                    $('#play-tts-name').attr('disabled', 'disabled');
+                }
+                else {
+                    $('#play-tts-name').removeAttr('disabled');
+                }
+            });
+            $('#play-tts-name').keyup(function () {
+                if ($('#play-tts-name').val() != '') {
+                    $('#play-wav-name').attr('disabled', 'disabled');
+                }
+                else {
+                    $('#play-wav-name').removeAttr('disabled');
+                }
+            });
+
+            $linkColor.change(function () {
+                var selectedLinkId = $('#ivr').flowchart('getSelectedLinkId');
+                if (selectedLinkId != null) {
+                    $('#ivr').flowchart('setLinkMainColor', selectedLinkId, $linkColor.val());
+                }
+            });
+        });
+
+        $('#delete_selected_button').click(function () {
+            $('#ivr').flowchart('deleteSelected');
+        });
+
+        $('#save_button').click(function () {
+            var data = $('#ivr').flowchart('getData');
+            if(Object.keys(data.operators).length == 1){
+                alert('Can Not Save Empty Flow Chart')
+                return false
+            } else {
+                $('#ivr').flowchart('saveIVR',$('#file-name').val());
+            }
+        });
+        
+        $('#activate_button').click(function () {
+            $('#ivr').flowchart('printIVR');
+
+        });
+        
+        // save data
+        $('#get_data').click(function () {
+            var data = $('#ivr').flowchart('getData');
+            var JsonData = JSON.stringify(data);
+            localStorage.setItem("data", JsonData);
+            //download(JsonData, 'json.txt', 'text/plain');
+
+        });
+        // create_obj TODO: need to add time, routeto and more..
+        // $('#create_obj').click(function () {
+
+        //     // get numbers from user
+        //     var inputs_counter = getNumber("inputs");
+        //     var outputs_counter = getNumber("outputs");
+        //     var msg = getMSG();
+
+        //     // create obj with inputs and outputs
+        //     var operatorI = $('#ivr').flowchart('getOperatorNum');
+
+        //     // input check
+        //     if (!(inputs_counter <= 0 || outputs_counter <= 0)) {
+
+        //         var data = {
+        //             id: {},
+        //             top: 80,
+        //             left: 500,
+        //             properties: {
+        //                 title: msg,
+        //                 inputs: {},
+        //                 outputs: {}
+        //             }
+        //         };
+        //         // create all inputs
+        //         for (let i = 1; i <= inputs_counter; i++) {
+        //             data.properties.inputs['input' + i] = {
+        //                 label: 'Input' + i
+        //             };
+        //         }
+        //         // create all outputs
+        //         for (let i = 1; i <= outputs_counter; i++) {
+        //             data.properties.outputs['output' + i] = {
+        //                 label: 'Output' + i
+        //             };
+        //         }
+        //         $('#ivr').flowchart('addOperator', data);
+        //         //$('#ivr').flowchart('createOperator', operatorId, data);
+        //     }
+
+        // });
+
+        $('#set_data').click(function () {
+            // $("#flowchart_data").css('display', 'none');
+            var data = JSON.parse(localStorage.getItem("data"));
+            $('#ivr').flowchart('setData', data);
+        });
+
+        $('#delete_button').click(function() {
+            var selected = [];
+            $('#FlowChartFiles input:checked').each(function() {
+                selected.push($(this).val());
+            });
+            console.log(selected)
+
+            const jsonUrl = "http://localhost:3000/api/DeleteJsonFiles";
+            fetch(jsonUrl, {
+                method: 'delete',
+                body:JSON.stringify(selected),
+                headers:{
+                    'Content-Type': 'application/json',
+                }
+            })
+            .then(res => {
+                if(res.statusText == 'OK'){
+                    selected.forEach(element => {
+                        if($('#FlowChartDropDown').val() == element){
+                            initEmptyFlowChart()
+                        }
+                        $("#FlowChartDropDown option[value="+element+"]").remove();
+                    })
+                }
+            }).catch(function () {
+                alert('Failed To Get The Exists Flow Charts - Server Is Off')
+            })
+
+
+        })
+        $('.save_changes').click(function () {
+            //need to use this for popup initilized
+            let opId = localStorage.getItem("operatorID")
+            let prop = $('#ivr').flowchart('getOperatorProperties', opId);
+            let dict = {};
+            // change dynamiclly 
+            if (prop.class == 'flowchart-play') {
+                dict = {
+                    title: $('#play-title-name').val(),
+                    wav: $('#play-wav-name').val(),
+                    tts: $('#play-tts-name').val(),
+                    time: $('#play-time-name').val()
+                }
+            } else if (prop.class == 'flowchart-logic') {
+                var outputs = []
+                var l = $('div#outputDiv :input');
+                $('div#outputDiv :input').each(function () {
+                    var input = $(this);
+                    let newLabel = input['0'].placeholder;
+                    if (input.val() !== '') {
+                        newLabel = input.val()
+                    }
+                    outputs.push(newLabel);
+                });
+                console.log(outputs)
+                dict = {
+                    title: $('#logic-title-name').val(),
+                    return_type: $('#logic-return-name').val(),
+                    input_size: $('#logic-inputs-name').val(),
+                    output_size: $('#logic-outputs-name').val(),
+                    outputs_labels: outputs
+                }
+
+            } else if (prop.class == 'flowchart-route') {
+                dict = {
+                    title: $('#route-title-name').val(),
+                    route: $('#route-route-name').val(),
+                }
+
+            } else if (prop.class == 'flowchart-cluster') {
+                if ($('#clusterDropDown').val() == 'Empty') {
+                    alert('No Cluster Was Choosen')
+                    return false;
+                }
+                dict = {
+                    title: $('#cluster-title-name').val(),
+                    cluster: $('#clusterDropDown').val()
+                }
+            } else if(prop.class == 'flowchart-getInput'){
+                dict = {
+                    title:$('#get-title-name').val(),
+                    variable_name:$('#get-variable-name').val()
+                }
+            }
+
+            
+            $('#ivr').flowchart('setOperatorChanges', opId, dict)
+            /*
+            // try to reload every thing - like arabic
+            //save in local storage
+            var data = $('#ivr').flowchart('getData');
+            var JsonData = JSON.stringify(data);
+            localStorage.setItem("data", JsonData);
+            //load from local storage
+            var data = JSON.parse(localStorage.getItem("data"));
+            $('#ivr').flowchart('setData', data);
+            */
+        })
+
+        $('#clear').click(function () {
+            var txt;
+            var r = confirm("Save Your State!\n Are You Sure?");
+            if (r == true) {
+                initEmptyFlowChart()
+            } else {
+                txt = "You pressed Cancel!";
+            }
+        });
+        function download(content, fileName, contentType) {
+            var a = document.createElement("a");
+            var file = new Blob([content], { type: contentType });
+            a.href = URL.createObjectURL(file);
+            a.download = fileName;
+            a.click();
+        }
+        // function getNumber(out_string) {
+        //     var txt;
+        //     var num = prompt("Please enter " + out_string + ":", "");
+        //     if (num == null || num == "") {
+        //         txt = "0";
+        //     } else {
+        //         txt = num
+        //     }
+        //     return parseInt(txt);
+        // }
+        // function getMSG() {
+        //     var txt = prompt("Please enter title:", "");
+        //     return txt;
+        // }
+        function onOutputChange() {
+            //need to use this for popup initilized
+            let opId = localStorage.getItem("operatorID")
+            let prop = $('#ivr').flowchart('getOperatorProperties', opId);
+            $('#Logic').empty()
+            console.log('test')
+            out_size = $('#logic-outputs-name').val()
+
+            let i = out_size
+
+            var formgroup = $('<div/>', {
+                class: 'form-group',
+                id: 'outputDiv'
+            })
+            for (let j = 0; j < i; j++) {
+                formgroup.append($('<label>', {
+                    class: 'col-form-label',
+                    text: 'label ' + (j + 1) + ':'
+                }));
+                let placeHolder = 'Output ' + (j + 1)
+                if (prop.outputs['output_' + j]) {
+                    placeHolder = prop.outputs['output_' + j].label
+                }
+                formgroup.append($('<input>', {
+                    class: 'form-control',
+                    type: 'text',
+                    placeholder: placeHolder,
+                    id: j.toString(),
+                }));
+                $('#Logic').append(formgroup)
+            }
+        }
+
+        function getJsonFileFromServer() {
+            if($('#FlowChartDropDown').val() == 'Empty'){
+                initEmptyFlowChart()
+                return false;
+            }
+            const url = "http://localhost:3000/api/GetJsonFile/" + $('#FlowChartDropDown').val();
+            fetch(url, {
+                method: 'get',
+            })
+                .then(data => { return data.json() })
+                .then(res => {
+                    if(res.msg == 'OK'){
+                        $('#ivr').flowchart('setData', res.data);
+                    } else if (res.msg == 'Failed'){
+                        alert('Failed To Get The Clusters - Internal Server Error')
+                    }
+                }).catch(function () {
+                    alert('Failed To Get The Clusters - Server Is Off')
+                })
+        }
+
+        function getJsonFileName(){
+            const jsonUrl = "http://localhost:3000/api/GetJsonCharts";
+            fetch(jsonUrl, {
+                method: 'get'
+            })
+            .then(data => { return data.json() })
+            .then(res => {
+                if(res.msg == 'OK') {
+                    $("#FlowChartFiles").empty();
+                    res.jsonName.forEach(element => {
+                        //Add the file names to FlowChart DropDown
+                        var o = new Option(element, "value");
+                        o.value = element;
+                        $(o).html(element);
+                        $("#FlowChartDropDown").append(o);
+                    });
+                } else if(res.msg == 'Failed'){
+                    alert('Failed To Get The Exists Flow Charts - Internal Server Error')
+                }
+            }).catch(function () {
+                alert('Failed To Get The Exists Flow Charts - Server Is Off')
+            })
+        }
+
+        function initDeleteModal(){
+            const jsonUrl = "http://localhost:3000/api/GetJsonCharts";
+            fetch(jsonUrl, {
+                method: 'get'
+            })
+                .then(data => { return data.json() })
+                .then(res => {
+                    $("#FlowChartFiles").empty();
+                    res.jsonName.forEach(element => {
+                        formgroup.append($('<input>', {
+                            class: 'form-check-input',
+                            type: 'checkbox',
+                            value: element
+                        }));
+                        formgroup.append($('<label>', {
+                            class: 'form-check-label',
+                            text: element
+                        }));
+                        $('#FlowChartFiles').append(formgroup)
+                    });
+                }).catch(function () {
+                    alert('Failed To Get The Exists Flow Charts - Server Is Off')
+                })
+
+            var formgroup = $('<div/>', {
+                class: 'form-check',
+            })
+        }
+
+        function initEmptyFlowChart(){
+            var data = {
+                    operators: {
+                        Start: {
+                            id: 'Start',
+                            top: 10,
+                            left: 10,
+                            properties: {
+                                title: 'Start',
+                                inputs: {},
+                                outputs: {
+                                    output_1: {
+                                        label: '',
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            $('#FlowChartDropDown').val('Empty')
+            $('#ivr').flowchart('setData', data);
+        }
+    </script>
+
+
+<script src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/vendors/jquery/dist/jquery.min.js"></script>
+<script src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/vendors/popper.js/dist/umd/popper.min.js"></script>
+<script src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/assets/js/main.js"></script>
+
+
+<script src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/vendors/chart.js/dist/Chart.bundle.min.js"></script>
+<script src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/assets/js/dashboard.js"></script>
+<script src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/assets/js/widgets.js"></script>
+<script src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/vendors/jqvmap/dist/jquery.vmap.min.js"></script>
+<script src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+<script src="file:///C:/Users/snirh/Desktop/IVR%20Builder%20-%20Version%204/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+<script>
+    (function ($) {
+        "use strict";
+        jQuery('#vmap').vectorMap({
+            map: 'world_en',
+            backgroundColor: null,
+            color: '#ffffff',
+            hoverOpacity: 0.7,
+            selectedColor: '#1de9b6',
+            enableZoom: true,
+            showTooltip: true,
+            values: sample_data,
+            scaleColors: ['#1de9b6', '#03a9f5'],
+            normalizeFunction: 'polynomial'
+        });
+    })(jQuery);
+</script>
+
+
+
+</div><div class="jqvmap-label" style="display: none;"></div></body></html>
